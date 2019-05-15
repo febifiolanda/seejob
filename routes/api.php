@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
+/* Setup CORS */
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +26,6 @@ Route::get('/job/{id}','JobController@show');
 Route::post('/job/store','JobController@store');
 Route::post('/job/update/{id}','JobController@update');
 Route::post('/job/delete/{id}','JobController@destroy');
+
+Route::get('dataJob','JobController@getData');
 

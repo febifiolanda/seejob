@@ -90,4 +90,22 @@ class JobController extends Controller{
         }
     }
 
+    public function getData(Request $request){
+        $list = [];
+
+    //     if($request->input('gender') !=null){
+    //         $list = Post::where('gender','=',$request->input('gender'))->get();
+    //     }
+        
+    //    else if($request->input('lokasi') !=null){
+    //         $list = Post::where('lokasi','like','%'.$request->input('lokasi').'%')->get();
+    //     }
+
+        if($request->input('nama_perusahaan') !=null && $request->input('jabatan') !=null){
+            $list = Job::where('nama_perusahaan','=',$request->input('nama_perusahaan'))
+            ->where('jabatan','like','%'.$request->input('jabatan').'%')->get();
+        }  
+        return response()->json($list);
+    }
+
 }
