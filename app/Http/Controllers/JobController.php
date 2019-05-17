@@ -102,7 +102,7 @@ class JobController extends Controller{
     //     }
 
         if($request->input('nama_perusahaan') !=null && $request->input('jabatan') !=null){
-            $list = Job::where('nama_perusahaan','=',$request->input('nama_perusahaan'))
+            $list = Job::where('nama_perusahaan','like','%'.$request->input('nama_perusahaan').'%')
             ->where('jabatan','like','%'.$request->input('jabatan').'%')->get();
         }  
         return response()->json($list);

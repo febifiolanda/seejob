@@ -620,7 +620,7 @@
   </head>
   <body>
     <div class="s01">
-        <a class="btn btn-link" href="{{ url('/home') }}">Homes</a>
+        <a class="btn btn-link" href="{{ url('/home') }}">Home</a>
       <form>
         <fieldset>
           <legend>Pencarian Gaji Perusahaan</legend>
@@ -628,7 +628,6 @@
         <div class="inner-form">
           <div class="input-field first-wrap">
             <input id="nama" type="text" placeholder="Nama Perusahaan" />
-            <br/>
           </div>
           
           <div class="input-field second-wrap">
@@ -683,7 +682,8 @@
                 console.info(data);
                 $('#list').empty();
                 $.each(data, function(key, value){
-                $('#list').append('<p>'+value['nama_perusahaan']+'</p>')
+                $('#list').append('<p>'+"Nama Perusahaan : "+value['nama_perusahaan']+'<br/>'+"Jabatan: "+value['jabatan']+'<br/>'+"Gaji: "+value['gaji']+'<br/>'+"Alamat : " +value['alamat']+'</p>')
+                
               })
             }
         });
