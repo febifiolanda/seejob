@@ -471,7 +471,7 @@
           -ms-flex-align: center;
               align-items: center;
           font-family: 'Poppins', sans-serif;
-          background: url("https://arsitagx-master.s3.ap-southeast-1.amazonaws.com/img-large/10654/8697/hiji-dua-studio-arsitektur-boarding-house-kos-kosan1526970024-l.jpeg");
+          background: url("http://www.tas.co.in/wp-content/uploads/2019/02/5-Step-Guide-to-Starting-1-e1-1024x669.jpg");
           background-size: cover;
           background-position: center center;
           padding: 15px;
@@ -628,10 +628,13 @@
         <div class="inner-form">
           <div class="input-field first-wrap">
             <input id="nama" type="text" placeholder="Nama Perusahaan" />
+            <br/>
           </div>
+          
           <div class="input-field second-wrap">
             <input id="jabatan" type="text" placeholder="Jabatan" />
           </div>
+
           <div class="input-field third-wrap">
             <button class="btn-search" type="button">Search</button>
           </div>

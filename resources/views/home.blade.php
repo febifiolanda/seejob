@@ -14,6 +14,7 @@
                         </div>
                     @endif
                      Selamat Datang!
+                     Form untuk menambah database
                      <form class="form-horizontal" role="form">    
                         {{ csrf_field() }}
 
@@ -108,6 +109,11 @@
                 },
             success: function (data) {
                 console.info(data);
+                alert('Data Berhasil Ditambahkan');
+                $('#nama').val("");
+                $('#jabatan').val("");
+                $('#alamat').val("");
+                $('#gaji').val("");
             }
         });
         });
