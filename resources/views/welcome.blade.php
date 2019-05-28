@@ -616,11 +616,44 @@
           }
         }
 
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+
+        .active {
+          background-color: #4CAF50;
+        }
+
+
     </style>
   </head>
   <body>
+<ul>
+  <li><a class="active" href="{{ url('/home') }}">Home</a></li>
+ 
+</ul>
+
     <div class="s01">
-        <a class="btn btn-link" href="{{ url('/home') }}">Home</a>
       <form>
         <fieldset>
           <legend>Pencarian Gaji Perusahaan</legend>
@@ -650,22 +683,6 @@
 
     
     <script type="text/javascript">
-    // $(document).ready(function(){
-    //   console.log('data');
-    //         $.ajax({ 
-    //         type: 'GET', 
-    //         url: 'http://localhost:8000/api/dataKos',  
-    //         dataType: 'json',
-    //         success: function (data) { 
-    //            console.log(data);
-    //           //  var obj=$.parseJSON(data);
-    //           $.each(data, function(key, value){
-    //             $('#list').append('<p>'+value['nama']+'</p>')
-    //           })
-              
-    //         }
-    //     });
-    //     });
 
     $(document).on('click', '.btn-search', function(event){
             alert('Yakin ingin mencari data?');
